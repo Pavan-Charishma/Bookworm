@@ -40,3 +40,8 @@ The OpenAPI document is at [docs/openapi.yaml](docs/openapi.yaml). The database 
 ## Ignored files
 
 The root `.gitignore` has comments explaining each excluded generated or local-only file. The `.gitignore` does not contain the explanation of the application; that belongs in this README and the presentation guide.
+
+## Project Demonstartion
+
+Watch the ReadNest application demostration video.
+(https://drive.google.com/file/d/1wzpr3UpEi2AlDza26G3yxuckoy9T2WlZ/view?usp=sharing)
