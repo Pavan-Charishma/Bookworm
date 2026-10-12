@@ -1,0 +1,20 @@
+# Installed frontend packages; restore them with npm install in frontend/.
+frontend/node_modules/
+
+# Built frontend output; Vite recreates this with npm run build.
+frontend/dist/
+
+# Local environment settings; keep passwords and machine-specific values out of Git.
+**/.env
+
+# Java build output; Maven recreates this with mvn package.
+backend/target/
+
+# Local IDE settings and operating-system metadata.
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Application and test logs.
+*.log
