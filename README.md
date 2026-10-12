@@ -10,7 +10,6 @@ Follow [docs/SETUP.md](docs/SETUP.md) to start PostgreSQL, the API, and the webs
 
 - `frontend/` — React pages, browser interactions, and CSS.
 - `backend/` — Spring Boot API, request validation, and database queries.
-- `database/` — PostgreSQL Docker Compose setup and database notes.
 - `docs/` — setup and presentation guides.
 
 ## What the website can do
