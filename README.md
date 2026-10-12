@@ -1,46 +1,138 @@
-# Bookworm Bookstore
+**Simple E-Bookstore**
 
-A small bookstore capstone project with a React website, a Spring Boot REST API, and PostgreSQL. It is designed to be easy to run, read, and explain in a presentation.
+This is a beginner-friendly, full-stack e-bookstore application inspired by the IBM Cloud Full Stack Developer capstone requirements. It demonstrates the main steps of an online shopping experience, from browsing books to placing an order and receiving confirmation.
 
-## Start here
+**Project Overview**
 
-Follow [docs/SETUP.md](docs/SETUP.md) to start PostgreSQL, the API, and the website.
+The application includes a React-based website and a Spring Boot REST API. It is intentionally kept simple so the code and the main application flow are easier to understand and present.
 
-## Project folders
+**Features**
 
-- `frontend/` — React pages, browser interactions, and CSS.
-- `backend/` — Spring Boot API, request validation, and database queries.
-- `docs/` — setup and presentation guides.
+Browse the available books.
 
-## What the website can do
+Search for books and filter them by category.
 
-- Browse 10 seeded books: two each in Fiction, Romance, Mystery, Fantasy, and Self-help.
-- Shop with Indian rupee prices (₹). If the API cannot be reached, the site switches to a local demo catalogue and saves demo orders in this browser.
-- Search and filter by category, publisher, format, and price; sort the results.
-- Open book details and view other books in the same category.
-- Save a wishlist and cart in the browser; book cards show how many copies are in the bag and update when another is added.
-- Create an account or sign in for the capstone demonstration.
-- Check out as a guest or signed-in customer with delivery details and simulated payment choices.
-- Apply reward points, see an order confirmation, look up order history by email, buy again, and cancel an order within 48 hours.
-- See suggestions from categories in previous orders.
+View details for an individual book.
 
-## Important demo limitations
+Add books to the cart or remove them.
 
-Payments are simulations: no card or payment-provider service is contacted, and the checkout never asks for card details. Offline demo orders are saved only in this browser; start PostgreSQL and the API to save orders in the database. Account sign-in is for learning the API flow, not production security. The demo has no real payment processing, shipping provider, email service, or production-grade authentication/session management.
+Change the quantity of books in the cart.
 
-## Presentation guide
+Submit a simple checkout form.
 
-See [docs/PRESENTATION.md](docs/PRESENTATION.md) for a plain-language explanation of the folders, request flow, and a short demo script.
+View an order confirmation after checkout.
 
-## API reference
+Use REST API endpoints to retrieve books and submit orders.
 
-The OpenAPI document is at [docs/openapi.yaml](docs/openapi.yaml). The database tables and seed data are described in [database/README.md](database/README.md).
+**Technology Stack**
 
-## Ignored files
+**Frontend:**
 
-The root `.gitignore` has comments explaining each excluded generated or local-only file. The `.gitignore` does not contain the explanation of the application; that belongs in this README and the presentation guide.
+React
 
-## Project Demonstartion
+Vite
 
-Watch the ReadNest application demostration video.
-(https://drive.google.com/file/d/1wzpr3UpEi2AlDza26G3yxuckoy9T2WlZ/view?usp=sharing)
+JavaScript
+
+HTML and plain CSS
+
+**Backend:**
+
+Java 21
+
+Spring Boot
+
+Spring Web
+
+**Project Structure**
+
+frontend/ – React user interface, pages, and styling.
+
+backend/ – Spring Boot application and REST API.
+
+README.md – Project overview and instructions.
+
+**How the Application Works**
+
+The user browses the book catalogue on the React website.
+
+The user can search for books, filter by category, and open book details.
+
+Selected books can be added to the cart, removed, or adjusted in quantity.
+
+The user submits the checkout form to place an order.
+
+The backend receives API requests and processes book and order operations.
+
+The website displays the order confirmation.
+
+**Run the Project Locally**
+
+1. Start the Backend
+
+Make sure Java 21 and Maven are installed. Open a terminal in the backend/ directory and run:
+
+mvn spring-boot:run
+
+The backend should start at http://localhost:8080.
+
+2. Start the Frontend
+
+Open a second terminal in the frontend/ directory and run:
+
+npm install
+npm run dev
+
+Open the local URL shown by Vite. It is commonly http://localhost:5173.
+
+API Endpoints
+
+Method
+
+Endpoint
+
+Purpose
+
+GET
+
+/api/books
+
+Retrieve the list of books
+
+GET
+
+/api/books/{id}
+
+Retrieve details for a specific book
+
+POST
+
+/api/orders
+
+Submit an order
+
+**Example: Fetch Books Using the API**
+
+The following JavaScript code sends a GET request to the backend to retrieve the list of available books.
+
+fetch("http://localhost:8080/api/books")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Unable to fetch books");
+    }
+    return response.json();
+  })
+  .then((books) => {
+    console.log("Available books:", books);
+  })
+  .catch((error) => {
+    console.error("Error:", error.message);
+  });
+
+This code uses fetch() to call the Spring Boot API, converts the response into JSON, and displays the books in the browser console. The backend must be running for the request to work.
+
+**Project Demonstration**
+
+Watch the application demonstration video:
+
+▶ Watch Demo Video on Google Drive
