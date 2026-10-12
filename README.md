@@ -85,31 +85,15 @@ npm run dev
 
 Open the local URL shown by Vite. It is commonly http://localhost:5173.
 
-API Endpoints
 
-Method
+**API Endpoints**
 
-Endpoint
+| Method | Endpoint    | Purpose                              |
+| ------ | ----------- | ------------------------------------ |
+| GET    | /api/books  | Retrieve the list of books           |
+| GET    | /api/books/ | Retrieve details for a specific book |
+| POST   | /api/orders | Submit an order                      |
 
-Purpose
-
-GET
-
-/api/books
-
-Retrieve the list of books
-
-GET
-
-/api/books/{id}
-
-Retrieve details for a specific book
-
-POST
-
-/api/orders
-
-Submit an order
 
 **Example: Fetch Books Using the API**
 
