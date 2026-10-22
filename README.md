@@ -91,7 +91,7 @@ npm run dev
 
 Open the local URL shown by Vite, commonly:
 
-http://localhost:5173
+http://localhost:5174/
 
 ## API Endpoints
 
