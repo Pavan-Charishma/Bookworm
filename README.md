@@ -127,7 +127,7 @@ This example uses `fetch()` to call the Spring Boot API, converts the response i
 
 Watch the application demonstration video:
 
-**[Watch Demo Video on Google Drive](https://drive.google.com/file/d/1wzpr3UpEi2AlDza26G3yxuckoy9T2Wl/view?usp=sharing)**
+(https://drive.google.com/file/d/1wzpr3UpEi2AlDza26G3yxuckoy9T2Wl/view?usp=sharing)
 
 ## Project Objective
 
