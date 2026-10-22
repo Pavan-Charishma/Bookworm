@@ -1,106 +1,99 @@
-**Simple E-Bookstore**
+# Simple E-Bookstore
 
-This is a beginner-friendly, full-stack e-bookstore application inspired by the IBM Cloud Full Stack Developer capstone requirements. It demonstrates the main steps of an online shopping experience, from browsing books to placing an order and receiving confirmation.
+***A Beginner-Friendly Full-Stack Online Bookstore***
 
-**Project Overview**
+This is a beginner-friendly, full-stack e-bookstore application inspired by the **IBM Cloud Full Stack Developer Capstone** requirements. It demonstrates the online shopping experience, from browsing books to placing an order and receiving confirmation.
 
-The application includes a React-based website and a Spring Boot REST API. It is intentionally kept simple so the code and the main application flow are easier to understand and present.
 
-**Features**
+## Project Overview
 
-Browse the available books.
+The application includes a **React-based frontend** and a **Spring Boot REST API**. The project demonstrates the main features and workflow of an online bookstore in a simple and understandable way.
 
-Search for books and filter them by category.
+## Features
 
-View details for an individual book.
+- **Browse Books** - Explore the available book catalogue.
+- **Search and Filter** - Search for books and filter them by category.
+- **Book Details** - View information about individual books.
+- **Shopping Cart** - Add or remove books from the cart.
+- **Quantity Management** - Change the quantity of books.
+- **Checkout** - Submit the checkout form to place an order.
+- **Order Confirmation** - View confirmation after checkout.
+- **REST API** - Retrieve book information and submit orders.
 
-Add books to the cart or remove them.
+## Technology Stack
 
-Change the quantity of books in the cart.
+### Frontend
 
-Submit a simple checkout form.
+- **React**
+- **Vite**
+- **JavaScript**
+- **HTML**
+- **CSS**
 
-View an order confirmation after checkout.
+### Backend
 
-Use REST API endpoints to retrieve books and submit orders.
+- **Java 21**
+- **Spring Boot**
+- **Spring Web**
 
-**Technology Stack**
+## Project Structure
 
-**Frontend:**
+Bookworm/
+├── frontend/       # React user interface, pages, and styling
+├── backend/        # Spring Boot application and REST API
+├── README.md       # Project overview and instructions
 
-React
+## How the Application Works
 
-Vite
+1. The user browses the book catalogue on the React website.
+2. The user searches for books, filters by category, and views book details.
+3. The user adds books to the cart, removes books, or adjusts quantities.
+4. The user submits the checkout form to place an order.
+5. The Spring Boot backend receives API requests and processes book and order operations.
+6. The website displays the order confirmation.
 
-JavaScript
+## Run the Project Locally
 
-HTML and plain CSS
+### 1. Start the Backend
 
-**Backend:**
+Make sure **Java 21** and **Maven** are installed.
 
-Java 21
+Open a terminal in the `backend/` directory and run:
 
-Spring Boot
-
-Spring Web
-
-**Project Structure**
-
-frontend/ – React user interface, pages, and styling.
-
-backend/ – Spring Boot application and REST API.
-
-README.md – Project overview and instructions.
-
-**How the Application Works**
-
-The user browses the book catalogue on the React website.
-
-The user can search for books, filter by category, and open book details.
-
-Selected books can be added to the cart, removed, or adjusted in quantity.
-
-The user submits the checkout form to place an order.
-
-The backend receives API requests and processes book and order operations.
-
-The website displays the order confirmation.
-
-**Run the Project Locally**
-
-1. Start the Backend
-
-Make sure Java 21 and Maven are installed. Open a terminal in the backend/ directory and run:
-
+```bash
 mvn spring-boot:run
+```
 
-The backend should start at http://localhost:8080.
+The backend should start at:
 
-2. Start the Frontend
+http://localhost:8080
 
-Open a second terminal in the frontend/ directory and run:
+### 2. Start the Frontend
 
+Open a second terminal in the `frontend/` directory and run:
+
+```bash
 npm install
 npm run dev
+```
 
-Open the local URL shown by Vite. It is commonly http://localhost:5173.
+Open the local URL shown by Vite, commonly:
 
+http://localhost:5173
 
+## API Endpoints
 
-**API Endpoints**
+| Method | Endpoint | Purpose |
+|:---:|---|---|
+| `GET` | `/api/books` | Retrieve the list of books |
+| `GET` | `/api/books/{id}` | Retrieve details for a specific book |
+| `POST` | `/api/orders` | Submit an order |
 
-| Method | Endpoint    | Purpose                              |
-| ------ | ----------- | ------------------------------------ |
-| GET    | /api/books  | Retrieve the list of books           |
-| GET    | /api/books/ | Retrieve details for a specific book |
-| POST   | /api/orders | Submit an order                      |
+## Example: Fetch Books Using the API
 
+The following JavaScript code sends a GET request to the backend to retrieve available books.
 
-
-**Example: Fetch Books Using the API**
-
-The following JavaScript code sends a GET request to the backend to retrieve the list of available books.
-
+```javascript
 fetch("http://localhost:8080/api/books")
   .then((response) => {
     if (!response.ok) {
@@ -114,12 +107,16 @@ fetch("http://localhost:8080/api/books")
   .catch((error) => {
     console.error("Error:", error.message);
   });
+```
 
-This code uses fetch() to call the Spring Boot API, converts the response into JSON, and displays the books in the browser console. The backend must be running for the request to work.
+This example uses `fetch()` to call the Spring Boot API, converts the response into JSON, and displays the books in the browser console. The backend must be running for the request to work.
 
-**Project Demonstration**
+## Project Demonstration
 
 Watch the application demonstration video:
 
-▶ Watch Demo Video on Google Drive
-https://drive.google.com/file/d/1wzpr3UpEi2AlDza26G3yxuckoy9T2WlZ/view?usp=sharing
+**[Watch Demo Video on Google Drive](https://drive.google.com/file/d/1wzpr3UpEi2AlDza26G3yxuckoy9T2Wl/view?usp=sharing)**
+
+## Project Objective
+
+The objective of this project is to demonstrate the fundamentals of **full-stack web development** by connecting a React frontend with a Spring Boot REST API and implementing a basic online shopping workflow.
