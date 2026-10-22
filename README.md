@@ -38,10 +38,22 @@ The application includes a **React-based frontend** and a **Spring Boot REST API
 
 ## Project Structure
 
+```text
 Bookworm/
-├── frontend/       # React user interface, pages, and styling
-├── backend/        # Spring Boot application and REST API
-├── README.md       # Project overview and instructions
+├── backend/
+├── frontend/
+├── docs/
+├── .gitignore
+├── PROJECT_EXPLAINED.md
+└── README.md
+```
+
+- **backend/** — Spring Boot application and REST API.
+- **frontend/** — React user interface, pages, and styling.
+- **docs/** — Project documentation.
+- **.gitignore** — Files excluded from Git.
+- **PROJECT_EXPLAINED.md** — Project explanation.
+- **README.md** — Project overview and instructions.
 
 ## How the Application Works
 
